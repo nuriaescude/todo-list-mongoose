@@ -1,0 +1,22 @@
+{
+  "name": "todolist-mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/app",
+    "dev": "nodemon server/app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.27",
+    "mongoose": "^4.10.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.1"
+  }
+}

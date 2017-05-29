@@ -1,0 +1,78 @@
+body {
+    background: #E8E8E8;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background: #e7e7e7;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+header .navbar {
+    background: #f95759;
+    border-radius: 0; 
+}
+.navbar-header a:link .navbar-brand{
+    text-decoration: none}
+
+h1 {
+    font-size: 20px;
+}
+form #form-new-task {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+#form-new-task input,
+#form-new-task button {
+    border-radius: 0;
+}
+
+#form-new-task input {
+    min-width: 400px;
+}
+
+.btn-add {
+    background: #007a87;
+    border-radius: 5px;
+}
+.list-tasks li {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.edit-label {
+    text-decoration: underline;
+}
+
+i.glyphicon.glyphicon-ok, i.glyphicon.glyphicon-pencil, i.glyphicon.glyphicon-remove {
+    color: #747474;
+}
+
+.empty-task {
+    background: #000;
+}
+
+table.table {
+    background: #fff;
+    box-shadow: 0 0 1em #747474;
+}
+
+table.table.table-bordered.table-completed th.item-th {
+    text-decoration: line-through;
+    height: 80px;
+}
+
+table small {
+        font-size: 80%;
+        padding-left: 10px;
+        font-style: italic;
+        color: #909090;
+}
+

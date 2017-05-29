@@ -1,0 +1,43 @@
+extends layout.pug
+
+block content  
+  .container.row.col-md-offset-2.col-md-8
+    form#form-new-task.form-inline(action='/tasks/', method='POST', role='form')
+      .form-group
+        input.form-control(type='text', name='title', placeholder='Write a task', autofocus) 
+      button.btn.btn-primary.btn-add.form-control(type='submit') Add task
+
+    if tasks.length !== 0
+      h1= title
+      table.table.table-striped
+        thead
+          tr
+            th 
+            th Name task
+            th Action
+        tbody
+          each task, index in tasks
+            tr
+              th(scope='row')
+                a.done(href='/task/'+task.id)
+                  i.glyphicon.glyphicon-ok
+                  td
+                    span= task.title 
+                      small #{moment(task.createdAt).format('YYYY/MM/DD HH:mm')}
+                  td
+                    a.edit-title.edit(href='/task/'+task.id)
+                      i.glyphicon.glyphicon-pencil
+                    a.delete(href='/task/'+task.id)
+                      i.glyphicon.glyphicon-remove
+            //- li.list-group-item
+            //-   a.btn.btn-success.done(href='/task/'+task.id) Done
+            //-   div
+            //-     p.edit-title
+            //-       | #{index+1}.
+            //-       span= task.title
+            //-       span.edit-label Edit 
+            //-     input.edit.hidden(type='text', name="title", data-id="/task/"+task.id, value=''+task.title)
+            //-   a.btn.btn-danger.delete(href='/task/'+task.id) Delete
+    else
+      h1= title
+      p No tasks  
