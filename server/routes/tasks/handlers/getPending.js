@@ -1,4 +1,4 @@
-const Task = require('../../../models/Task')
+const Task = require(__base + 'models/task')
 
 function getPending (req, res) {
 
